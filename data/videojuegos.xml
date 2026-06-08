@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalogo SYSTEM "videojuegos.dtd">
+<catalogo>
+    <videojuego id="v1">
+        <titulo>Cyberpunk 2077</titulo>
+        <genero>RPG</genero>
+        <precio>899.00</precio>
+        <imagen>https://picsum.photos/id/10/200/200</imagen>
+        <plataformas>PC, PS5, Xbox</plataformas>
+    </videojuego>
+    <videojuego id="v2">
+        <titulo>Doom Eternal</titulo>
+        <genero>Shooter</genero>
+        <precio>599.00</precio>
+        <imagen>https://picsum.photos/id/11/200/200</imagen>
+        <plataformas>PC, PS4, Xbox</plataformas>
+    </videojuego>
+    <videojuego id="v3">
+        <titulo>Elden Ring</titulo>
+        <genero>RPG</genero>
+        <precio>1200.00</precio>
+        <imagen>https://picsum.photos/id/12/200/200</imagen>
+        <plataformas>PC, PS5</plataformas>
+    </videojuego>
+</catalogo>

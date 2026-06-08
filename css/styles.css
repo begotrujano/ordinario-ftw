@@ -92,3 +92,28 @@ footer {
     margin-top: 40px;
     border-top: 1px solid #333;
 }
+
+.tarjeta-juego {
+    background-color: var(--fondo-tarjeta);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.tarjeta-juego figure {
+    margin: 0;
+}
+
+.tarjeta-juego img {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.2); /* Sombra estilo neón */
+}
+
+.tarjeta-juego .precio {
+    font-size: 1.2em;
+    color: var(--acento-neon);
+    font-weight: bold;
+}
