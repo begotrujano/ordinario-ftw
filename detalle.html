@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Juego - GameVerse</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>GameVerse</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-layout">
+        
+        <section class="galeria-juego">
+            <figure class="imagen-principal">
+                <img id="img-destacada" src="https://picsum.photos/id/10/600/400" alt="Cyberpunk 2077">
+            </figure>
+            <div class="miniaturas">
+                <img src="https://picsum.photos/id/10/600/400" alt="Miniatura 1" class="miniatura activa">
+                <img src="https://picsum.photos/id/13/600/400" alt="Miniatura 2" class="miniatura">
+                <img src="https://picsum.photos/id/14/600/400" alt="Miniatura 3" class="miniatura">
+                <img src="https://picsum.photos/id/15/600/400" alt="Miniatura 4" class="miniatura">
+            </div>
+        </section>
+
+        <article class="info-juego">
+            <h2>Cyberpunk 2077</h2>
+            <p class="etiqueta-genero">RPG / Mundo Abierto</p>
+            <p class="descripcion">
+                Cyberpunk 2077 es un RPG de acción y aventura de mundo abierto ambientado en la megalópolis de Night City, donde juegas como un mercenario ciberpunk envuelto en una lucha a vida o muerte por la supervivencia.
+            </p>
+            
+            <div class="bloque-compra">
+                <p class="precio-detalle">$899.00 MXN</p>
+                <p>Plataformas: PC, PS5, Xbox</p>
+                <button id="btn-agregar-carrito">Añadir al Carrito</button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por el Equipo J - Fundamentos de Tecnologías Web</p>
+    </footer>
+
+    <script src="js/detalle.js"></script>
+</body>
+</html>
