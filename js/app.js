@@ -3,13 +3,13 @@ const btnFiltrar = document.getElementById("btn-filtrar");
 const filtroGenero = document.getElementById("filtro-genero");
 const inputBusqueda = document.getElementById("busqueda");
 
-// Array global para guardar los juegos en memoria una vez cargados
 let listaJuegos = [];
 
-const TarjetaVideojuego = (titulo, genero, precio, imagen, plataformas) => {
+// 1. Aquí recibimos el 'id' como primer parámetro
+const TarjetaVideojuego = (id, titulo, genero, precio, imagen, plataformas) => {
     return `
         <article class="tarjeta-juego">
-            <a href="detalle.html">
+            <a href="detalle.html?id=${id}">
                 <figure>
                     <img src="${imagen}" alt="${titulo}">
                 </figure>
@@ -19,23 +19,22 @@ const TarjetaVideojuego = (titulo, genero, precio, imagen, plataformas) => {
             <p><strong>Plataformas:</strong> ${plataformas}</p>
             <p class="precio">$${precio} MXN</p>
             <button onclick="console.log('Añadido: ${titulo}')">Añadir al Carrito</button>
-            
-            <a href="detalle.html" style="display:block; margin-top:10px; color: var(--acento-neon); text-decoration: none;">Ver Detalles</a>
+            <a href="detalle.html?id=${id}" style="display:block; margin-top:10px; color: var(--acento-neon); text-decoration: none;">Ver Detalles</a>
         </article>
     `;
 }
 
-// Carga inicial del XML
 function cargarDatos() {
     fetch('data/videojuegos.xml')
         .then(response => response.text())
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
             const juegosXML = data.getElementsByTagName("videojuego");
-            listaJuegos = []; // Limpiamos
+            listaJuegos = []; 
             
             for (let i = 0; i < juegosXML.length; i++) {
                 listaJuegos.push({
+                    id: juegosXML[i].getAttribute("id"), // 2. Aquí leemos el ID del XML
                     titulo: juegosXML[i].getElementsByTagName("titulo")[0].textContent,
                     genero: juegosXML[i].getElementsByTagName("genero")[0].textContent,
                     precio: juegosXML[i].getElementsByTagName("precio")[0].textContent,
@@ -43,13 +42,11 @@ function cargarDatos() {
                     plataformas: juegosXML[i].getElementsByTagName("plataformas")[0].textContent
                 });
             }
-            // Mostramos todos al arrancar
             mostrarJuegos(listaJuegos);
         })
         .catch(error => console.error("Error cargando XML:", error));
 }
 
-// Función para pintar las tarjetas filtradas
 function mostrarJuegos(juegos) {
     contenedor.innerHTML = "";
     if (juegos.length === 0) {
@@ -57,11 +54,11 @@ function mostrarJuegos(juegos) {
         return;
     }
     juegos.forEach(j => {
-        contenedor.innerHTML += TarjetaVideojuego(j.titulo, j.genero, j.precio, j.imagen, j.plataformas);
+        // 3. Y aquí le inyectamos el j.id a la tarjeta cuando se dibuja
+        contenedor.innerHTML += TarjetaVideojuego(j.id, j.titulo, j.genero, j.precio, j.imagen, j.plataformas);
     });
 }
 
-// Función de filtrado dinámico
 function filtrarJuegos() {
     const generoSeleccionado = filtroGenero.value.toLowerCase();
     const textoBuscar = inputBusqueda.value.toLowerCase().trim();
@@ -75,9 +72,7 @@ function filtrarJuegos() {
     mostrarJuegos(juegosFiltrados);
 }
 
-// Eventos para que funcione al dar clic o al escribir
 btnFiltrar.addEventListener("click", filtrarJuegos);
-inputBusqueda.addEventListener("input", filtrarJuegos); // Búsqueda en tiempo real mientras escribe
+inputBusqueda.addEventListener("input", filtrarJuegos);
 
-// Iniciar app
 cargarDatos();
