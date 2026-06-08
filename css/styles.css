@@ -295,3 +295,55 @@ tr:hover {
     border-radius: 8px;
     min-height: 300px;
 }
+
+/*ESTILOS DE SOPORTE (ACORDEÓN Y TICKETS)*/
+.faq-seccion {
+    padding-right: 20px;
+}
+
+.acordeon-btn {
+    background-color: var(--fondo-tarjeta);
+    color: var(--texto-claro);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.acordeon-btn:hover, .acordeon-btn.activo {
+    background-color: var(--acento-neon);
+    color: #000;
+}
+
+.acordeon-panel {
+    padding: 0 18px;
+    background-color: #1a1a1a;
+    display: none; /* Oculto por defecto */
+    overflow: hidden;
+    border-left: 2px solid var(--acento-neon);
+    margin-bottom: 15px;
+}
+
+.ticket-seccion {
+    background-color: var(--fondo-tarjeta);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+textarea {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: vertical;
+}

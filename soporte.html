@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - GameVerse</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>GameVerse</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="admin.html">Administración</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="soporte.html" style="color: var(--acento-neon);">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-layout">
+        
+        <section class="faq-seccion" style="flex: 1;">
+            <h2>Preguntas Frecuentes</h2>
+            
+            <button class="acordeon-btn">¿Cómo descargo mis juegos?</button>
+            <div class="acordeon-panel">
+                <p>Ve a "Mi Perfil", entra a "Mis Juegos" y haz clic en el botón de descargar al lado del título correspondiente.</p>
+            </div>
+
+            <button class="acordeon-btn">¿Aceptan devoluciones?</button>
+            <div class="acordeon-panel">
+                <p>Sí, ofrecemos reembolsos dentro de los primeros 14 días de la compra, siempre y cuando no hayas jugado más de 2 horas.</p>
+            </div>
+
+            <button class="acordeon-btn">¿Qué métodos de pago aceptan?</button>
+            <div class="acordeon-panel">
+                <p>Aceptamos todas las tarjetas de crédito/débito, PayPal y pagos en efectivo a través de tiendas de conveniencia.</p>
+            </div>
+        </section>
+
+        <aside class="ticket-seccion" style="flex: 1;">
+            <h2>Abrir Ticket de Soporte</h2>
+            <form id="formulario-ticket">
+                <label for="asunto">Asunto del problema:</label>
+                <select id="asunto" required>
+                    <option value="">Selecciona una opción...</option>
+                    <option value="pago">Problema con un cobro</option>
+                    <option value="descarga">Error al descargar juego</option>
+                    <option value="cuenta">Recuperación de cuenta</option>
+                    <option value="bug">Reportar un bug / error</option>
+                </select>
+
+                <label for="descripcion">Descripción detallada:</label>
+                <textarea id="descripcion" rows="5" required placeholder="Escribe al menos 20 caracteres explicando el problema..."></textarea>
+
+                <button type="submit" id="btn-enviar-ticket">Enviar Ticket</button>
+            </form>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por Diego - Fundamentos de Tecnologías Web</p>
+    </footer>
+
+    <script src="js/soporte.js"></script>
+</body>
+</html>
