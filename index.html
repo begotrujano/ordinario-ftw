@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameVerse - Catálogo de Videojuegos</title>
+    <title>Catálogo - GameVerse</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,47 +12,59 @@
         <h1>GameVerse</h1>
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html">Catálogo</a></li>
-                <li><a href="carrito.html">Carrito (<span id="contador-carrito">0</span>)</a></li>
+                <li><a href="index.html" style="color: var(--acento-azul);">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
                 <li><a href="admin.html">Administración</a></li>
                 <li><a href="perfil.html">Mi Perfil</a></li>
                 <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="contenedor-layout">
+    <section class="hero-banner">
+        <div class="hero-contenido">
+            <span class="etiqueta-reserva">RESERVA</span>
+            <h2>ELDEN RING: SHADOW OF THE ERDTREE - ¡YA DISPONIBLE!</h2>
+            <button class="btn-amarillo">RESERVAR AHORA</button>
+        </div>
+    </section>
+
+    <main class="contenedor-principal">
         
-        <aside>
-            <h2>Filtros</h2>
-            <form id="formulario-filtros">
-                <label for="filtro-genero">Género:</label>
-                <select id="filtro-genero">
+        <aside class="sidebar-filtros">
+            <h3>Filtros</h3>
+            
+            <div class="grupo-filtro" style="margin-bottom: 15px;">
+                <label for="busqueda" style="display: block; margin-bottom: 5px;">Buscar juego:</label>
+                <input type="text" id="busqueda" placeholder="Ej. Cyberpunk..." style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: #333; color: white;">
+            </div>
+            
+            <div class="grupo-filtro" style="margin-bottom: 15px;">
+                <label for="filtro-genero" style="display: block; margin-bottom: 5px;">Género:</label>
+                <select id="filtro-genero" style="width: 100%; padding: 10px; border-radius: 5px; border: none; background: #333; color: white;">
                     <option value="todos">Todos</option>
+                    <option value="acción">Acción</option>
                     <option value="rpg">RPG</option>
-                    <option value="accion">Acción</option>
                     <option value="shooter">Shooter</option>
                 </select>
-
-                <label for="busqueda">Buscar:</label>
-                <input type="text" id="busqueda" placeholder="Nombre del juego...">
-                
-                <button type="button" id="btn-filtrar">Aplicar Filtros</button>
-            </form>
+            </div>
+            
+            <button id="btn-filtrar" class="btn-azul" style="width: 100%; padding: 12px; font-size: 1em;">Aplicar Filtros</button>
         </aside>
 
-        <main>
-            <h2>Catálogo Destacado</h2>
-            <section id="contenedor-juegos" class="grid-juegos">
-                <p>Cargando catálogo...</p>
-            </section>
-        </main>
+        <section class="area-juegos">
+            <h2 class="titulo-seccion">LANZAMIENTOS DESTACADOS</h2>
+            <div id="contenedor-juegos" class="grid-juegos">
+                </div>
+        </section>
 
-    </div>
+    </main>
 
     <footer>
         <p>Desarrollado por Diego - Fundamentos de Tecnologías Web</p>
     </footer>
-<script src="js/app.js"></script>
+
+    <script src="js/app.js"></script>
 </body>
 </html>

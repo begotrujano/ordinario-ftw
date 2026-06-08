@@ -8,13 +8,15 @@
         <imagen>https://image.api.playstation.com/vulcan/ap/rnd/202008/0416/6Bo40lnWU0BhgrOUm7Cb6by3.png</imagen>
         <plataformas>PC, PS5, Xbox</plataformas>
     </videojuego>
+    
     <videojuego id="v2">
-        <titulo>LEGO Batman: El Legado del Caballero Oscuro</titulo>
-        <genero>Aventura</genero>
+        <titulo>LEGO Batman</titulo>
+        <genero>Acción</genero>
         <precio>1199.00</precio>
         <imagen>https://image.api.playstation.com/vulcan/ap/rnd/202508/1316/3302f35b66691aa405aee31624c0c95fe73081be8e0c75bb.png</imagen>
         <plataformas>PC, PS5, Xbox</plataformas>
     </videojuego>
+    
     <videojuego id="v3">
         <titulo>Elden Ring</titulo>
         <genero>RPG</genero>
@@ -22,5 +24,52 @@
         <imagen>https://i.redd.it/bueqtztxmnj81.png</imagen>
         <plataformas>PC, PS5</plataformas>
     </videojuego>
-    
+
+    <videojuego id="v4">
+        <titulo>Castle Crashers</titulo>
+        <genero>Acción</genero>
+        <precio>299.00</precio>
+        <imagen>https://i.3djuegos.com/juegos/12146/castle_crashers_remastered/fotos/ficha/castle_crashers_remastered-5156761.webp</imagen>
+        <plataformas>PC, Switch, Xbox</plataformas>
+    </videojuego>
+
+    <videojuego id="v5">
+        <titulo>It Takes Two</titulo>
+        <genero>Acción</genero>
+        <precio>799.00</precio>
+        <imagen>https://image.api.playstation.com/vulcan/ap/rnd/202012/0815/0Xqi1LgRoEtJ5zlFprpd54Vu.png</imagen>
+        <plataformas>PC, PS5, Xbox</plataformas>
+    </videojuego>
+
+    <videojuego id="v6">
+        <titulo>Minecraft</titulo>
+        <genero>Acción</genero>
+        <precio>499.00</precio>
+        <imagen>https://preview.redd.it/new-minecraft-art-cover-what-do-you-think-v0-jncj9eqr9bad1.jpeg?auto=webp&amp;s=8ba0359485474ee23ca522d0fdddb59bdec9c250</imagen>
+        <plataformas>PC, PS5, Xbox, Switch</plataformas>
+    </videojuego>
+
+    <videojuego id="v7">
+        <titulo>PvZ Garden Warfare 2</titulo>
+        <genero>Shooter</genero>
+        <precio>399.00</precio>
+        <imagen>https://store-images.s-microsoft.com/image/apps.7672.68092588132505117.32378282-ea7e-40c4-a3a2-81703aa936d7.ee0c2315-50e1-4175-a1ee-f59e0fc7b52e</imagen>
+        <plataformas>PC, PS4, Xbox</plataformas>
+    </videojuego>
+
+    <videojuego id="v8">
+        <titulo>Sea of Thieves</titulo>
+        <genero>Acción</genero>
+        <precio>699.00</precio>
+        <imagen>https://i.3djuegos.com/juegos/12142/sea_of_thieves/fotos/ficha/sea_of_thieves-3475005.jpg</imagen>
+        <plataformas>PC, Xbox</plataformas>
+    </videojuego>
+
+    <videojuego id="v9">
+        <titulo>Grand Theft Auto V</titulo>
+        <genero>Shooter</genero>
+        <precio>599.00</precio>
+        <imagen>https://i.blogs.es/2c9c70/gta-20v-20portada-20grande/450_1000.webp</imagen>
+        <plataformas>PC, PS5, Xbox</plataformas>
+    </videojuego>
 </catalogo>

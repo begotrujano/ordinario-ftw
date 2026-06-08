@@ -1,5 +1,12 @@
 const cuerpoTabla = document.getElementById("cuerpo-tabla");
 
+window.eliminarFila = function(boton, titulo) {
+    if(confirm('¿Seguro que deseas eliminar ' + titulo + ' del inventario?')) {
+        const fila = boton.closest('tr');
+        fila.remove();
+    }
+}
+
 const FilaVideojuego = (id, titulo, genero, plataformas, precio) => {
     return `
         <tr>
@@ -8,7 +15,7 @@ const FilaVideojuego = (id, titulo, genero, plataformas, precio) => {
             <td>${genero}</td>
             <td>${plataformas}</td>
             <td>$${precio}</td>
-            <td><button class="btn-accion" onclick="alert('Simulando eliminar: ${titulo}')">Eliminar</button></td>
+            <td><button class="btn-accion" onclick="eliminarFila(this, '${titulo}')">Eliminar</button></td>
         </tr>
     `;
 }
@@ -27,12 +34,12 @@ function cargarTablaAdmin() {
                 let genero = juegos[i].getElementsByTagName("genero")[0].textContent;
                 let plataformas = juegos[i].getElementsByTagName("plataformas")[0].textContent;
                 let precio = juegos[i].getElementsByTagName("precio")[0].textContent;
-
+                
                 cuerpoTabla.innerHTML += FilaVideojuego(id, titulo, genero, plataformas, precio);
             }
         })
         .catch(error => {
-            console.error("Error al cargar el XML en admin:", error);
+            console.error(error);
             cuerpoTabla.innerHTML = "<tr><td colspan='6'>Error cargando datos.</td></tr>";
         });
 }

@@ -347,3 +347,145 @@ textarea {
     margin-bottom: 20px;
     resize: vertical;
 }
+
+/*ESTILOS DE COMUNIDAD Y RESEÑAS*/
+.seccion-publicar {
+    background-color: var(--fondo-tarjeta);
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.estrellas {
+    font-size: 2em;
+    color: #555;
+    cursor: pointer;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+.estrella:hover, .estrella.activa {
+    color: #ffd700;
+}
+
+.tarjeta-resena {
+    background-color: var(--fondo-tarjeta);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--acento-neon);
+    margin-bottom: 15px;
+}
+
+.cabecera-resena {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.cabecera-resena h4 {
+    margin: 0;
+    color: var(--acento-neon);
+}
+
+.calificacion-visual {
+    color: #ffd700;
+}
+
+:root {
+    --fondo-sitio: #13141c; 
+    --fondo-tarjeta: #1e2233; 
+    --acento-azul: #007bff; 
+    --texto-claro: #ffffff;
+}
+
+body {
+    background-color: var(--fondo-sitio);
+    color: var(--texto-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-banner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    height: 300px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.1)), url('https://i.redd.it/bueqtztxmnj81.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.etiqueta-reserva { color: #ffd700; font-weight: bold; letter-spacing: 2px; }
+.hero-contenido h2 { font-size: 2.5em; max-width: 600px; margin: 10px 0 20px 0; }
+.btn-amarillo { background-color: #ffd700; color: #000; font-weight: bold; border: none; padding: 10px 25px; border-radius: 20px; cursor: pointer; }
+
+.contenedor-principal {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 20px;
+}
+
+.sidebar-filtros { width: 250px; }
+.area-juegos { flex: 1; }
+.titulo-seccion { font-size: 1.2em; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+
+.grid-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-juego {
+    background-color: var(--fondo-tarjeta);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.tarjeta-juego:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--acento-azul);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.tarjeta-juego img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.info-tarjeta { padding: 15px; }
+.info-tarjeta h3 { font-size: 1em; margin: 0 0 5px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.plataformas-txt { font-size: 0.8em; color: #aaa; margin: 0 0 15px 0; }
+
+.precio-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio { font-weight: bold; font-size: 1.1em; }
+
+.btn-azul {
+    background-color: var(--acento-azul);
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-azul:hover { background-color: #0056b3; }

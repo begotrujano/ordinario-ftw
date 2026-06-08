@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - GameVerse</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>GameVerse</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="admin.html">Administración</a></li>
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="comunidad.html" style="color: var(--acento-neon);">Comunidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-layout">
+        
+        <aside class="seccion-publicar" style="flex: 1;">
+            <h2>Escribe una Reseña</h2>
+            <form id="formulario-resena">
+                <label for="juego-resena">¿Qué juego vas a calificar?</label>
+                <input type="text" id="juego-resena" required placeholder="Ej. Cyberpunk 2077">
+
+                <label>Calificación:</label>
+                <div class="estrellas" id="sistema-estrellas">
+                    <span class="estrella" data-valor="1">★</span>
+                    <span class="estrella" data-valor="2">★</span>
+                    <span class="estrella" data-valor="3">★</span>
+                    <span class="estrella" data-valor="4">★</span>
+                    <span class="estrella" data-valor="5">★</span>
+                </div>
+                <input type="hidden" id="calificacion-oculta" required>
+
+                <label for="texto-resena">Tu opinión:</label>
+                <textarea id="texto-resena" rows="4" required placeholder="¿Qué te pareció el juego?"></textarea>
+
+                <button type="submit">Publicar Reseña</button>
+            </form>
+        </aside>
+
+        <section class="muro-comunidad" style="flex: 2;">
+            <h2>Últimas Reseñas</h2>
+            <div id="lista-resenas">
+                <article class="tarjeta-resena">
+                    <div class="cabecera-resena">
+                        <h4>Jugador_Pro</h4>
+                        <span class="calificacion-visual">★★★★★</span>
+                    </div>
+                    <p><strong>Elden Ring</strong></p>
+                    <p>Una obra maestra absoluta. La dificultad es alta pero la satisfacción de derrotar a los jefes es inigualable.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por Diego - Fundamentos de Tecnologías Web</p>
+    </footer>
+
+    <script src="js/comunidad.js"></script>
+</body>
+</html>

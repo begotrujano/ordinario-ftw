@@ -5,7 +5,20 @@ const inputBusqueda = document.getElementById("busqueda");
 
 let listaJuegos = [];
 
-// 1. Aquí recibimos el 'id' como primer parámetro
+window.agregarAlCarrito = function(id, titulo, precio, imagen) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const existe = carrito.find(item => item.id === id);
+    
+    if(existe) {
+        existe.cantidad += 1;
+    } else {
+        carrito.push({ id, titulo, precio: parseFloat(precio), cantidad: 1, imagen: imagen });
+    }
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    alert("🛒 ¡" + titulo + " añadido al carrito!");
+}
+
 const TarjetaVideojuego = (id, titulo, genero, precio, imagen, plataformas) => {
     return `
         <article class="tarjeta-juego">
@@ -14,12 +27,14 @@ const TarjetaVideojuego = (id, titulo, genero, precio, imagen, plataformas) => {
                     <img src="${imagen}" alt="${titulo}">
                 </figure>
             </a>
-            <h3>${titulo}</h3>
-            <p><strong>Género:</strong> ${genero}</p>
-            <p><strong>Plataformas:</strong> ${plataformas}</p>
-            <p class="precio">$${precio} MXN</p>
-            <button onclick="console.log('Añadido: ${titulo}')">Añadir al Carrito</button>
-            <a href="detalle.html?id=${id}" style="display:block; margin-top:10px; color: var(--acento-neon); text-decoration: none;">Ver Detalles</a>
+            <div class="info-tarjeta">
+                <h3>${titulo}</h3>
+                <p class="plataformas-txt">🎮 ${plataformas}</p>
+                <div class="precio-row">
+                    <span class="precio">$${precio}</span>
+                    <button class="btn-azul" onclick="agregarAlCarrito('${id}', '${titulo}', ${precio}, '${imagen}')">AGREGAR</button>
+                </div>
+            </div>
         </article>
     `;
 }
@@ -34,7 +49,7 @@ function cargarDatos() {
             
             for (let i = 0; i < juegosXML.length; i++) {
                 listaJuegos.push({
-                    id: juegosXML[i].getAttribute("id"), // 2. Aquí leemos el ID del XML
+                    id: juegosXML[i].getAttribute("id"),
                     titulo: juegosXML[i].getElementsByTagName("titulo")[0].textContent,
                     genero: juegosXML[i].getElementsByTagName("genero")[0].textContent,
                     precio: juegosXML[i].getElementsByTagName("precio")[0].textContent,
@@ -44,7 +59,7 @@ function cargarDatos() {
             }
             mostrarJuegos(listaJuegos);
         })
-        .catch(error => console.error("Error cargando XML:", error));
+        .catch(error => console.error(error));
 }
 
 function mostrarJuegos(juegos) {
@@ -54,7 +69,6 @@ function mostrarJuegos(juegos) {
         return;
     }
     juegos.forEach(j => {
-        // 3. Y aquí le inyectamos el j.id a la tarjeta cuando se dibuja
         contenedor.innerHTML += TarjetaVideojuego(j.id, j.titulo, j.genero, j.precio, j.imagen, j.plataformas);
     });
 }
