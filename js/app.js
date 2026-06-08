@@ -9,14 +9,18 @@ let listaJuegos = [];
 const TarjetaVideojuego = (titulo, genero, precio, imagen, plataformas) => {
     return `
         <article class="tarjeta-juego">
-            <figure>
-                <img src="${imagen}" alt="${titulo}">
-            </figure>
+            <a href="detalle.html">
+                <figure>
+                    <img src="${imagen}" alt="${titulo}">
+                </figure>
+            </a>
             <h3>${titulo}</h3>
             <p><strong>Género:</strong> ${genero}</p>
             <p><strong>Plataformas:</strong> ${plataformas}</p>
             <p class="precio">$${precio} MXN</p>
             <button onclick="console.log('Añadido: ${titulo}')">Añadir al Carrito</button>
+            
+            <a href="detalle.html" style="display:block; margin-top:10px; color: var(--acento-neon); text-decoration: none;">Ver Detalles</a>
         </article>
     `;
 }
