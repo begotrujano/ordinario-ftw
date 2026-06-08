@@ -117,3 +117,40 @@ footer {
     color: var(--acento-neon);
     font-weight: bold;
 }
+/*ESTILOS DEL CARRITO*/
+.lista-carrito {
+    flex-grow: 2; 
+    background-color: var(--fondo-tarjeta);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+.item-carrito input {
+    width: 70px;
+    margin: 0; 
+}
+
+.checkout-form {
+    flex-grow: 1;
+    background-color: var(--fondo-tarjeta);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-top: 15px;
+}
+
+.checkout-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
