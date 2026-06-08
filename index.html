@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse - Catálogo de Videojuegos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>GameVerse</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito (<span id="contador-carrito">0</span>)</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-layout">
+        
+        <aside>
+            <h2>Filtros</h2>
+            <form id="formulario-filtros">
+                <label for="filtro-genero">Género:</label>
+                <select id="filtro-genero">
+                    <option value="todos">Todos</option>
+                    <option value="rpg">RPG</option>
+                    <option value="accion">Acción</option>
+                    <option value="shooter">Shooter</option>
+                </select>
+
+                <label for="busqueda">Buscar:</label>
+                <input type="text" id="busqueda" placeholder="Nombre del juego...">
+                
+                <button type="button" id="btn-filtrar">Aplicar Filtros</button>
+            </form>
+        </aside>
+
+        <main>
+            <h2>Catálogo Destacado</h2>
+            <section id="contenedor-juegos" class="grid-juegos">
+                <p>Cargando catálogo...</p>
+            </section>
+        </main>
+
+    </div>
+
+    <footer>
+        <p>Desarrollado por Diego - Fundamentos de Tecnologías Web</p>
+    </footer>
+
+</body>
+</html>
