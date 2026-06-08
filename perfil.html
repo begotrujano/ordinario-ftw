@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - GameVerse</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>GameVerse</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="admin.html">Administración</a></li>
+                <li><a href="perfil.html" style="color: var(--acento-neon);">Mi Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-layout">
+        
+        <aside class="info-perfil">
+            <img src="https://preview.redd.it/xbox-360-players-which-pfp-did-you-use-back-on-the-golden-v0-ldnsyw059di51.jpg?width=150&format=pjpg&auto=webp&s=eb8ec59180f572108eedab035910bbf6a02a022e" alt="Avatar de usuario" style="border-radius: 50%; margin-bottom: 15px;">
+            <h2>Usuario1</h2>
+            <p style="color: var(--acento-neon);">Experimentado</p>
+            <p>Miembro desde 2024</p>
+        </aside>
+
+        <section class="contenido-perfil" style="flex-grow: 2;">
+            
+            <div class="tabs-botones">
+                <button class="tab-btn activo" onclick="abrirPestana(event, 'mis-juegos')">Mis Juegos</button>
+                <button class="tab-btn" onclick="abrirPestana(event, 'lista-deseos')">Lista de Deseos</button>
+            </div>
+
+            <div id="mis-juegos" class="tab-contenido" style="display: block;">
+                <h3>Biblioteca de Juegos</h3>
+                <p>Juegos que ya adquiriste y están listos para descargar.</p>
+                <div class="grid-juegos">
+                    <article class="tarjeta-juego">
+                        <img src="https://i.redd.it/bueqtztxmnj81.png" alt="Elden Ring" style="width:100%; border-radius: 10px;">
+                        <h4>Elden Ring</h4>
+                    </article>
+                </div>
+            </div>
+
+            <div id="lista-deseos" class="tab-contenido" style="display: none;">
+                <h3>Lista de Deseos</h3>
+                <p>Tus juegos guardados para comprar después.</p>
+                <div class="grid-juegos">
+                    <article class="tarjeta-juego">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202508/1316/3302f35b66691aa405aee31624c0c95fe73081be8e0c75bb.png" alt="LEGO Batman: El Legado del Caballero Oscuro" style="width:100%; border-radius: 10px;">
+                        <h4>LEGO Batman: El Legado del Caballero Oscuro</h4>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por el Equipo J - Fundamentos de Tecnologías Web</p>
+    </footer>
+
+    <script src="js/perfil.js"></script>
+</body>
+</html>
