@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - GameVerse</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>GameVerse Admin</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-layout" style="flex-direction: column;">
+        <h2>Gestión de Inventario</h2>
+        <p>Datos recuperados en tiempo real desde videojuegos.xml</p>
+        
+        <section class="tabla-admin">
+            <table id="tabla-juegos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Plataformas</th>
+                        <th>Precio (MXN)</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+                    <tr><td colspan="6">Cargando inventario...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Diego - Fundamentos de Tecnologías Web</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

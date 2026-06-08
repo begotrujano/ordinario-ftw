@@ -2,7 +2,7 @@
     --fondo-oscuro: #121212;
     --fondo-tarjeta: #1e1e1e;
     --texto-claro: #e0e0e0;
-    --acento-neon: #00ffcc;
+    --acento-neon: #46afd2;
 }
 
 body {
@@ -153,4 +153,40 @@ footer {
 .checkout-form input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
+}
+/* ESTILOS DE LA TABLA (ADMIN) */
+.tabla-admin {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--fondo-tarjeta);
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: var(--acento-neon);
+    color: #000;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #2a2a2a;
+}
+
+.btn-accion {
+    background-color: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
